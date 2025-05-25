@@ -1,3 +1,9 @@
+// @title Goportunities API
+// @version 1.0
+// @description API to manage job openings
+// @host localhost:8090
+// @BasePath /api/v1
+
 package main
 
 import (

@@ -8,6 +8,19 @@ import (
 	"github.com/victorramos887/golang_oportunities/schemas"
 )
 
+
+// @BasePath /api/v1
+
+// @Summary Show opening
+// @Description Show job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHandler(ctx *gin.Context) {
 
 	//ctx.JSON(http.StatusOK, gin.H{"message": "GET Opening"})

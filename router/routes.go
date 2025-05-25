@@ -2,9 +2,9 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
-	docs "github.com/victorramos887/golang_oportunities/docs"
+	"github.com/swaggo/files"
+	"github.com/swaggo/gin-swagger"
+	"github.com/victorramos887/golang_oportunities/docs"
 	"github.com/victorramos887/golang_oportunities/handler"
 )
 
