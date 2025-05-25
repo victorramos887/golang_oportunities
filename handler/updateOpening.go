@@ -7,6 +7,21 @@ import (
 	"github.com/victorramos887/golang_oportunities/schemas"
 )
 
+
+// @BasePath /api/v1
+
+// @Summary Update opening
+// @Description Update a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening Identification"
+// @Param opening body UpdateOpeningResponse true "Opening data to Update"
+// @Success 200 {object} UpdateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [put]
 func UpdateOpeningHandler(ctx *gin.Context) {
 
 	//ctx.JSON(http.StatusOK, gin.H{"message": "PUT Opening"})
@@ -15,7 +30,7 @@ func UpdateOpeningHandler(ctx *gin.Context) {
 	ctx.BindJSON(&request)
 
 	if err := request.Validate(); err != nil {
-		logger.Error("validation error: %v", err.Error())
+		logger.Error("validation error: " + err.Error())
 		return
 	}
 

@@ -19,7 +19,7 @@ import (
 // @Success 200 {object} ListOpeningResponse
 // @Failure 400 {object} ErrorResponse
 // @Failure 500 {object} ErrorResponse
-// @Router /opening [get]
+// @Router /openings [get]
 func ListOpeningHandler(ctx *gin.Context) {
 
 	openings := []schemas.Opening{}
